@@ -1,6 +1,6 @@
 module Main where
 
-import Light2D.Basic
+import Light2D.CSG
 
 main :: IO ()
-main = dumpBasicFile
+main = dumpCSGFile
