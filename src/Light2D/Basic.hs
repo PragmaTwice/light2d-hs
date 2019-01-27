@@ -1,4 +1,7 @@
-module Light2D.Basic where
+module Light2D.Basic (
+    generateBasicImage, 
+    dumpBasicFile
+) where
 
 import Codec.Picture.Png
 import Codec.Picture.Types
