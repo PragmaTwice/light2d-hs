@@ -23,7 +23,7 @@ sample :: Float -> Float -> Float
 sample x y = (foldl (+) 0 $ map traceFunc [0..n - 1]) / n where
     traceFunc i = trace x y (cos $ a i) (sin $ a i)
     a i = 2 * pi * i / n
-    n = 64
+    n = 64 * 4
 
 
 generateBasicImage :: Image PixelRGB8
