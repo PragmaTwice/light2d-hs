@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import Light2D.Basic
 
 main :: IO ()
-main = dumpRedPng
+main = dumpBasicFile
