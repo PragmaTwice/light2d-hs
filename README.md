@@ -16,3 +16,6 @@ NO. Random algorithms in Haskell lead to RealWorld operations (mostly when initi
 
 #### About issue for usage, improvement or disagreement:
 Welcome.
+
+#### About runtime performance:
+Bad, I know it runs very slowly. But I still cannot be skilled with Haskell, so further optimization is unreachable now. Therefore if there are some PRs about these improvement, I will be grateful.
