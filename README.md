@@ -1,5 +1,7 @@
 # light2d-hs
 
+[![Build Status](https://travis-ci.com/PragmaTwice/light2d-hs.svg?branch=master)](https://travis-ci.com/PragmaTwice/light2d-hs)
+
 learn miloyip/light2d, and translate to haskell
 
 ## dependencies
