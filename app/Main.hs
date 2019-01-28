@@ -1,6 +1,6 @@
 module Main where
 
-import Light2D.Shapes
+import Light2D.Reflection
 
 main :: IO ()
-main = dumpShapesFile
+main = dumpReflectionFile
