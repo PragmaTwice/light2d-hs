@@ -4,7 +4,7 @@ learn miloyip/light2d, and translate to haskell
 
 ## dependencies
 
-- Haskell
+- GHC
 - Stack *(for package management)*
 - JuicyPixels *(for dumping PNG image file)*
 - other packages in `package.yaml/dependencies`
