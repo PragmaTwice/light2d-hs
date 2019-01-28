@@ -122,7 +122,7 @@ sample :: Float -> Float -> Float
 sample x y = (foldl (+) 0 $ map traceFunc [0..n - 1]) / n where
     traceFunc i = trace x y (cos $ a i) (sin $ a i) 0
     a i = 2 * pi * i / n
-    n = 64 * 4
+    n = 256 * 4
 
 
 generateRefractionImage :: Image PixelRGB8
