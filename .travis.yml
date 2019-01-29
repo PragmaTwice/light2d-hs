@@ -18,6 +18,9 @@ addons:
   apt:
     packages:
       - libgmp-dev
+      - libimage-exiftool-perl
+      - graphicsmagick
+      - npm
 
 before_install:
 # Download and unpack the stack executable
@@ -37,10 +40,12 @@ script:
 before_deploy:
 # Show image dir content
 - ls -l $TRAVIS_BUILD_DIR/img
+- npm install -g thumbsup
+- thumbsup --input $TRAVIS_BUILD_DIR/img --output $TRAVIS_BUILD_DIR/demo
 
 deploy:
   provider: surge
-  project: ./img/
+  project: ./demo/
   domain: light2d-hs.surge.sh
   skip_cleanup: true
   on: img-deploy
