@@ -4,6 +4,10 @@ dist: xenial
 # Do not choose a language; we provide our own build tools.
 language: generic
 
+# Environment Variables for Surge
+env:
+- SURGE_LOGIN=e.d.boy@aliyun.com SURGE_TOKEN=8f1419039633a071a97927c40f3b9599
+
 # Caching so the next build will be fast too.
 cache:
   directories:
@@ -14,6 +18,9 @@ addons:
   apt:
     packages:
       - libgmp-dev
+      - libimage-exiftool-perl
+      - graphicsmagick
+      - npm
 
 before_install:
 # Download and unpack the stack executable
@@ -28,3 +35,17 @@ install:
 script:
 # Build the package, its tests, and its docs and run the tests
 - stack --no-terminal build
+- travis_wait 30 stack --no-terminal test
+
+before_deploy:
+# Show image dir content
+- ls -l $TRAVIS_BUILD_DIR/img
+- npm install -g thumbsup
+- thumbsup --input $TRAVIS_BUILD_DIR/img --output $TRAVIS_BUILD_DIR/demo --title "Light2D-hs Demos" --original-photos true --theme cards
+
+deploy:
+  provider: surge
+  project: ./demo/
+  domain: light2d-hs.surge.sh
+  skip_cleanup: true
+  on: img-deploy
