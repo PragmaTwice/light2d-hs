@@ -27,4 +27,8 @@ install:
 
 script:
 # Build the package, its tests, and its docs and run the tests
-- stack --no-terminal build
+- stack --no-terminal test
+
+after_success:
+# Show image dir content
+- ls -al $TRAVIS_BUILD_DIR/img
