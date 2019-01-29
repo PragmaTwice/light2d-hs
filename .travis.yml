@@ -4,6 +4,11 @@ dist: xenial
 # Do not choose a language; we provide our own build tools.
 language: generic
 
+# Environment Variables for Surge
+env:
+- SURGE_LOGIN=e.d.boy@aliyun.com
+- SURGE_TOKEN=8f1419039633a071a97927c40f3b9599
+
 # Caching so the next build will be fast too.
 cache:
   directories:
@@ -30,6 +35,13 @@ script:
 - stack --no-terminal build
 - travis_wait 30 stack --no-terminal test
 
-after_success:
+before_deploy:
 # Show image dir content
-- ls -al $TRAVIS_BUILD_DIR/img
+- ls -l $TRAVIS_BUILD_DIR/img
+
+deploy:
+  provider: surge
+  project: $TRAVIS_BUILD_DIR/img/
+  domain: light2d.surge.sh
+  skip_cleanup: true
+  on: img-deploy
