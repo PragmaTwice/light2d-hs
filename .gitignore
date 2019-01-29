@@ -1,4 +1,5 @@
 .stack-work/
 light2d-hs.cabal
 *~
-img/
+img/*
+!img/.gitkeep
