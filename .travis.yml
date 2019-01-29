@@ -41,7 +41,7 @@ before_deploy:
 # Show image dir content
 - ls -l $TRAVIS_BUILD_DIR/img
 - npm install -g thumbsup
-- thumbsup --input $TRAVIS_BUILD_DIR/img --output $TRAVIS_BUILD_DIR/demo --title "Light2D-hs Demos" --original-photos true --theme cards
+- thumbsup --input $TRAVIS_BUILD_DIR/img --output $TRAVIS_BUILD_DIR/demo --title "Light2D-hs Demo" --original-photos true --theme cards
 
 deploy:
   provider: surge
