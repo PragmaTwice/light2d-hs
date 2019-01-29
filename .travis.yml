@@ -6,8 +6,7 @@ language: generic
 
 # Environment Variables for Surge
 env:
-- SURGE_LOGIN=e.d.boy@aliyun.com
-- SURGE_TOKEN=8f1419039633a071a97927c40f3b9599
+- SURGE_LOGIN=e.d.boy@aliyun.com SURGE_TOKEN=8f1419039633a071a97927c40f3b9599
 
 # Caching so the next build will be fast too.
 cache:
