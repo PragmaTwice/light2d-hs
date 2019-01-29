@@ -1,6 +1,6 @@
 module Main where
 
-import Light2D.Refraction
+import Light2D.Fresnel
 
 main :: IO ()
-main = dumpRefractionFile
+main = dumpFresnelFile

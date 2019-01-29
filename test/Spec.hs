@@ -3,6 +3,7 @@ import Light2D.CSG
 import Light2D.Shapes
 import Light2D.Reflection
 import Light2D.Refraction
+import Light2D.Fresnel
 import Debug.Trace
 
 main :: IO ()
@@ -12,5 +13,6 @@ main = foldl (>>) (putStrLn "Start dumping images...") $
         ("CSG",         dumpCSGFile), 
         ("Shapes",      dumpShapesFile), 
         ("Reflection",  dumpReflectionFile), 
-        ("Refraction",  dumpRefractionFile)
+        ("Refraction",  dumpRefractionFile),
+        ("Fresnel",     dumpFresnelFile)
     ]
