@@ -12,6 +12,7 @@ env:
 cache:
   directories:
   - $HOME/.stack
+  - $HOME/.nvm
 
 # Ensure necessary system libraries are present
 addons:
@@ -40,7 +41,7 @@ before_deploy:
 
 deploy:
   provider: surge
-  project: $TRAVIS_BUILD_DIR/img/
+  project: ./img/
   domain: light2d.surge.sh
   skip_cleanup: true
   on: img-deploy
