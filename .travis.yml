@@ -48,4 +48,3 @@ deploy:
   project: ./demo/
   domain: light2d-hs.surge.sh
   skip_cleanup: true
-  on: img-deploy
