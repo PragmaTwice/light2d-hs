@@ -4,6 +4,7 @@ import Light2D.Shapes
 import Light2D.Reflection
 import Light2D.Refraction
 import Light2D.Fresnel
+import Light2D.BeerLambert
 import Debug.Trace
 
 main :: IO ()
@@ -14,5 +15,6 @@ main = foldl (>>) (putStrLn "Start dumping images...") $
         ("Shapes",      dumpShapesFile), 
         ("Reflection",  dumpReflectionFile), 
         ("Refraction",  dumpRefractionFile),
-        ("Fresnel",     dumpFresnelFile)
+        ("Fresnel",     dumpFresnelFile),
+        ("BeerLambert", dumpBeerLambertFile)
     ]

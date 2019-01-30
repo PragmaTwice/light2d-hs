@@ -1,6 +1,6 @@
 module Main where
 
-import Light2D.Fresnel
+import Light2D.BeerLambert
 
 main :: IO ()
-main = dumpFresnelFile
+main = dumpBeerLambertFile
