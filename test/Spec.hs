@@ -18,5 +18,5 @@ main = foldl (>>) (putStrLn "Start dumping images...") $
         ("Refraction",  dumpRefractionFile),
         ("Fresnel",     dumpFresnelFile),
         ("BeerLambert", dumpBeerLambertFile),
-        ("Dispersion",  dumpDispersiontFile)
+        ("Dispersion",  dumpDispersionFile)
     ]
