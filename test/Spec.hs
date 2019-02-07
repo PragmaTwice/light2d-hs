@@ -6,6 +6,7 @@ import Light2D.Refraction
 import Light2D.Fresnel
 import Light2D.BeerLambert
 import Light2D.Dispersion
+import Light2D.BeerLambertColor
 import Debug.Trace
 
 main :: IO ()
@@ -18,5 +19,6 @@ main = foldl (>>) (putStrLn "Start dumping images...") $
         ("Refraction",  dumpRefractionFile),
         ("Fresnel",     dumpFresnelFile),
         ("BeerLambert", dumpBeerLambertFile),
-        ("Dispersion",  dumpDispersionFile)
+        ("Dispersion",  dumpDispersionFile),
+        ("BeerLambertColor",  dumpBeerLambertColorFile)
     ]
