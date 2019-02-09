@@ -174,7 +174,7 @@ sample :: Float -> Float -> Color
 sample x y = (foldl (#+#) black $ map traceFunc [0..n - 1])  #* (1.0 / n) where
     traceFunc i = trace x y (cos $ a i) (sin $ a i) 0
     a i = 2 * pi * (i + rand x y) / n
-    n = 64
+    n = 256
 
 
 generateBeerLambertColorImage :: Image PixelRGB8
