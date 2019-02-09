@@ -7,6 +7,10 @@ import Codec.Picture.Png
 import Codec.Picture.Types
 import Data.Fixed
 
+rand :: Float -> Float -> Float
+rand x y = fract $ (sin $ x * 12.9898 + y * 78.233) * 43758.5453123 where
+    fract x = x - fromIntegral (floor x)
+
 circleSDF :: Float -> Float -> Float -> Float -> Float -> Float
 circleSDF x y cx cy r = sqrt (ux * ux + uy * uy) - r where
     ux = x - cx
@@ -169,8 +173,8 @@ trace ox oy dx dy depth = traceImpl 0 1e-3 where
 sample :: Float -> Float -> Color
 sample x y = (foldl (#+#) black $ map traceFunc [0..n - 1])  #* (1.0 / n) where
     traceFunc i = trace x y (cos $ a i) (sin $ a i) 0
-    a i = 2 * pi * i / n
-    n = 256 * 4
+    a i = 2 * pi * (i + rand x y) / n
+    n = 64
 
 
 generateBeerLambertColorImage :: Image PixelRGB8
