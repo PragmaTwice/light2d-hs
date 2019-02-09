@@ -36,7 +36,7 @@ script:
 # Output something every 5 minutes or Travis kills the job
 - while sleep 5m; do echo "$SECONDS seconds still running..."; done &
 # Build the package, its tests, and its docs and run the tests
-- stack --no-terminal build --ghc-options "-O2 -fexcess-precision -optc-O3 -optc-ffast-math" --test
+- stack --no-terminal build --test
 # Killing background sleep loop
 - kill %1
 
