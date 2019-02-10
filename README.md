@@ -20,7 +20,8 @@ So enjoy in [light2d-hs.surge.sh](https://light2d-hs.surge.sh/).
 ## others
 
 #### About random algorithm: 
-NO. Random algorithms in Haskell lead to RealWorld operations (mostly when initializing the random seed via `/dev/urandom` on Unix-like systems or `RtlGenRandom` on Windows), and produce lots of IO Monad, which would damage these concise light2d algorithms.
+~~NO. (Dynamic) random algorithms in Haskell lead to RealWorld operations (mostly when initializing the random seed via `/dev/urandom` on Unix-like systems or `RtlGenRandom` on Windows), and produce lots of IO Monad, which would damage these concise light2d algorithms.~~
+In [BeerLambertColor part](https://github.com/PragmaTwice/light2d-hs/blob/master/src/Light2D/BeerLambertColor.hs#L10), a static random algorithm is used in jittered sampling.
 
 #### About issue for usage, improvement or disagreement:
 Welcome.
