@@ -15,12 +15,13 @@ learn [miloyip/light2d](https://github.com/miloyip/light2d), and translate to ha
 
 [TravisCI](https://travis-ci.com/) will automatically run all of these algorithms, render images, and generate a image website using [thumbsup](https://github.com/thumbsup/thumbsup), then upload the site to [Surge](https://surge.sh/).
 
-So enjoy in [light2d-hs.surge.sh](https://light2d-hs.surge.sh/).
+So enjoy in **[light2d-hs.surge.sh](https://light2d-hs.surge.sh/)**.
 
 ## others
 
 #### About random algorithm: 
 ~~NO. (Dynamic) random algorithms in Haskell lead to RealWorld operations (mostly when initializing the random seed via `/dev/urandom` on Unix-like systems or `RtlGenRandom` on Windows), and produce lots of IO Monad, which would damage these concise light2d algorithms.~~
+
 In [BeerLambertColor part](https://github.com/PragmaTwice/light2d-hs/blob/master/src/Light2D/BeerLambertColor.hs#L10), a static random algorithm is used in jittered sampling.
 
 #### About issue for usage, improvement or disagreement:
